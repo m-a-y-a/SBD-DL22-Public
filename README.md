@@ -26,5 +26,5 @@ Program Upload Sequence specific to our PCB:
 
 ### Troubleshooting
 * Ensure that "Tools > Board: MSP430FR5969LP" and "Tools > Port" is specified correctly
-* Install "Drivers" library [need clarification on this]
+* Install "Drivers" library [need drivers file from Yen?]
 
