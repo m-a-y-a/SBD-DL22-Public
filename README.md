@@ -2,12 +2,12 @@
 SBD-DL22 program files for use in PCB manufacturing
 
 Hardware Requirements:
-* Texas Instruments MSP430 microcontroller - *included in circuit design
-* 14-pin MSP430 JTAG header- *included in circuit design
+* Texas Instruments MSP430 microcontroller - *included in circuit design*
+* 14-pin MSP430 JTAG header- *included in circuit design*
 * MSP-FET debug probe
 
 Software Requirements:
-* Energia IDE- *this is a modified version of the Arduino Genuino IDE for the TI MSP430
+* Energia IDE- *this is a modified version of the Arduino Genuino IDE for the TI MSP430*
 * SBD-DL22-Public GitHub repository files
 
 To uploading program data to the MSP430 on-board the PCB:
