@@ -23,3 +23,8 @@ Program Upload Sequence specific to our PCB:
 1. Upload/Run set_clock.ino:
 	* Open Serial Monitor and ensure the correct current time printout before proceeding (Date : dd/mm/yyyy	hh:mm.ss)
 2) Upload/Run main.ino
+
+## Troubleshooting
+* Ensure that "Tools > Board: MSP430FR5969LP" and "Tools > Port" is specified correctly
+* Install "Drivers" library [need clarification on this]
+
