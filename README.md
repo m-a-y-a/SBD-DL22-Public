@@ -22,8 +22,8 @@ Software Requirements:
 2. To open .ino files: 
 	* Open the Energia IDE. Within the IDE, select "File>Open" and select the relevant .ino file
 3. To upload/run .ino files:
-	* In the IDE, click "Upload" (arrow icon, top left). This will run the program and display any program outputs to the "Serial Monitor"
-(magnifying glass icon, top right).
+	* In the IDE, click the "Upload" arrow icon (top left). This will run the program and display any program outputs to the "Serial Monitor"
+magnifying glass icon (top right).
 
 ## Step 3. Upload Program Data
 ### First, we will modify and run a program to set the RTC clock. 
