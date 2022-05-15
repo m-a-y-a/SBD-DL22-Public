@@ -36,6 +36,7 @@ magnifying glass icon (top right).
 	* "t.year" = yyyy (current year)
 2. Upload/Run 'SBD-DL22-Public/set_clock.ino'
         * Open Serial Monitor and verify that the current time readout is correct (Date: dd/mm/yyyy hh:mm.ss)
+     
 ### Then, run a program which allows the MSP430 to begin data collection.
 3. Upload/Run 'SBD-DL22-Public/MainV8.ino'
 
