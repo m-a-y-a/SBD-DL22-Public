@@ -17,10 +17,12 @@ Software Requirements:
 2. Unzip/install LaunchPad drivers: available at 'SBD-DL22-Public/Energia_installation'
 
 ## Step 2. Prepare for Program Upload
-To upload program data to the MSP430 on-board the PCB:
+### Now, we will connect a computer to the PCB board and become familiar with the Energia IDE.
 1. Connect the MSP-FET debug probe from a computer, with Energia pre-installed, to the on-board JTAG header.
-2. Open the Energia IDE and the .ino file you wish to upload.
-3. Click Upload (arrow icon, top left). This will run the program and display outputs, if any, to the Serial Monitor
+2. To open .ino files: 
+	* Open the Energia IDE. Within the IDE, select "Open" and select the relevant .ino file
+3. To upload/run .ino files:
+	* In the IDE, click "Upload" (arrow icon, top left). This will run the program and display any program outputs to the "Serial Monitor"
 (magnifying glass icon, top right).
 
 ## Step 3. Upload Program Data
