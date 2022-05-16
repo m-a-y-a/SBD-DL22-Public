@@ -17,7 +17,7 @@ Software Requirements:
 2. Unzip/install LaunchPad drivers: available at 'SBD-DL22-Public/Energia_installation'
 
 ## Step 2. Prepare for Program Upload
-#### Now, we will connect a computer to the PCB board and prepare Energia
+#### Now, we will connect a computer to the PCB board and set-up Energia
 1. Connect the MSP-FET debug probe from a computer, with Energia pre-installed, to the on-board JTAG header.
 2. Download the following files from our repository:
 	* 'set_clock.ino' : available at 'SBD-DL22-Public/set_clock.ino'
