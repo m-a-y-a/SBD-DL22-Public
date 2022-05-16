@@ -17,31 +17,39 @@ Software Requirements:
 2. Unzip/install LaunchPad drivers: available at 'SBD-DL22-Public/Energia_installation'
 
 ## Step 2. Prepare for Program Upload
-#### Now, we will connect a computer to the PCB board and become familiar with using the Energia IDE.
+#### Now, we will connect a computer to the PCB board and prepare Energia
 1. Connect the MSP-FET debug probe from a computer, with Energia pre-installed, to the on-board JTAG header.
-2. To open .ino files: 
-	* Open the Energia IDE. In the application, select "File>Open" and select the relevant .ino file
-3. To modify an .ino file:
-	* In the application, edit the .ino file as you would a .txt file. Once finished, click the "Verify" checkmark (top left) to compile the program. The program should compile and there should be no "error" messages in the black terminal window below.
-5. To upload/run .ino files:
-	* In the application, click the "Upload" arrow icon (top left). This will run the program and display any program outputs to the "Serial Monitor"
-magnifying glass icon (top right).
+2. Download the following files from our repository:
+	* 'set_clock.ino' : available at 'SBD-DL22-Public/set_clock.ino'
+	* 'MainV8.ino': available at 'SBD-DL22-Public/MainV8.ino'
+3. Open Energia IDE, and verify the following settings under the "Tools" menu:
+	* in "Tools>Board", "MSP-EXP430FR5969LP" is selected
+	* in "Tools>Port", the USB port that the MSP-FET is plugged into is selected
 
 ## Step 3. Upload Program Data
 #### First, we will modify and run a program to set the RTC clock. 
-1. Update'SBD-DL22-Public/set_clock.ino' with the current time (24-hr clock):
+1. *Open* 'set_clock.ino'
+2. *Edit* 'set_clock.ino' with the current time (24-hr clock):
 	* "t.hour" = hh (current hour)
 	* "t.min" = mm (current minute)
 	* "t.sec" = ss (current second)
 	* "t.mday" = dd (current day of the month)
 	* "t.mon" = mm (current month)
 	* "t.year" = yyyy (current year)
-2. Upload/Run 'SBD-DL22-Public/set_clock.ino'
+2. *Upload/Run* 'set_clock.ino'
 	* Open Serial Monitor and verify that the current time readout is correct (Date: dd/mm/yyyy hh:mm.ss)
 
 #### Then, run a program which allows the MSP430 to begin data collection.
-3. Upload/Run 'SBD-DL22-Public/MainV8.ino'
+3. *Open* 'MainV8.ino'
+4. *Upload/Run* 'MainV8.ino'
 
-#### Troubleshooting
-* Ensure that "Tools > Board: MSP430FR5969LP" and "Tools > Port" is specified correctly
+## Energia IDE Reference
+#### This is a general reference on how to use the Energia IDE, if any of the terminology used in the steps above is unclear:
+* To *Open* .ino files: 
+	* Open the Energia IDE. In the application, select "File>Open" and select the relevant .ino file
+* To *Edit* an .ino file:
+	* In the application, edit the .ino file as you would a .txt file. Once finished, click the "Verify" checkmark (top left) to compile the program. The program should compile and there should be no "error" messages in the black terminal window below.
+* To *Upload/Run* .ino files:
+	* In the application, click the "Upload" arrow icon (top left). This will run the program and display any program outputs to the "Serial Monitor"
+magnifying glass icon (top right).
 
