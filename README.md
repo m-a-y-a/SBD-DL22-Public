@@ -23,7 +23,7 @@ Software Requirements:
 	* 'clock_sync.ino' : available at 'SBD-DL22-Public/set_clock.ino'
 	* 'MainV8.ino': available at 'SBD-DL22-Public/MainV8.ino'
 3. Download the 'Libraries' file from our repository
-4. Open the folder containing Energia on the computer, and move all files in 'Libraries' to Energia's 'libraries' folder
+4. Open the folder containing Energia on your computer, and move all files in 'Libraries' to Energia's 'libraries' folder
 5. Open Energia IDE, and verify the following settings under the "Tools" menu:
 	* in "Tools>Board", "MSP-EXP430FR5969LP" is selected
 	* in "Tools>Port", the USB port that the MSP-FET is plugged into is selected
