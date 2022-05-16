@@ -27,7 +27,7 @@ magnifying glass icon (top right).
 
 ## Step 3. Upload Program Data
 #### First, we will modify and run a program to set the RTC clock. 
-1. Update'SBD-DL22-Public/set_clock.ino' with the current time:
+1. Update'SBD-DL22-Public/set_clock.ino' with the current time (24-hr clock):
 	* "t.hour" = hh (current hour)
 	* "t.min" = mm (current minute)
 	* "t.sec" = ss (current second)
