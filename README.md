@@ -29,27 +29,27 @@ Software Requirements:
 ## Step 3. Upload Program Data
 #### First, we will modify and run a program to set the RTC clock. 
 1. *Open* 'set_clock.ino'
-2. *Edit* 'set_clock.ino' with the current time (24-hr clock):
+2. *Edit/Compile* 'set_clock.ino' with the current time (24-hr clock):
 	* "t.hour" = hh (current hour)
 	* "t.min" = mm (current minute)
 	* "t.sec" = ss (current second)
 	* "t.mday" = dd (current day of the month)
 	* "t.mon" = mm (current month)
 	* "t.year" = yyyy (current year)
-2. *Upload/Run* 'set_clock.ino'
+2. *Run* 'set_clock.ino'
 	* Open Serial Monitor and verify that the current time readout is correct (Date: dd/mm/yyyy hh:mm.ss)
 
 #### Then, run a program which allows the MSP430 to begin data collection.
 3. *Open* 'MainV8.ino'
-4. *Upload/Run* 'MainV8.ino'
+4. *Run* 'MainV8.ino'
 
 ## Energia IDE Reference
 #### This is a general reference on how to use the Energia IDE, if any of the terminology used in the steps above is unclear:
 * To *Open* .ino files: 
 	* Open the Energia IDE. In the application, select "File>Open" and select the relevant .ino file
-* To *Edit* an .ino file:
+* To *Edit/Compile* an .ino file:
 	* In the application, edit the .ino file as you would a .txt file. Once finished, click the "Verify" checkmark (top left) to compile the program. The program should compile and there should be no "error" messages in the black terminal window below.
-* To *Upload/Run* .ino files:
+* To *Run* .ino files:
 	* In the application, click the "Upload" arrow icon (top left). This will run the program and display any program outputs to the "Serial Monitor"
 magnifying glass icon (top right).
 
