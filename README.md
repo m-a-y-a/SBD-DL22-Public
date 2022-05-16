@@ -20,9 +20,9 @@ Software Requirements:
 #### Now, we will connect a computer to the PCB board and become familiar with the Energia IDE.
 1. Connect the MSP-FET debug probe from a computer, with Energia pre-installed, to the on-board JTAG header.
 2. To open .ino files: 
-	* Open the Energia IDE. Within the IDE, select "File>Open" and select the relevant .ino file
+	* Open the Energia IDE. In the application, select "File>Open" and select the relevant .ino file
 3. To upload/run .ino files:
-	* In the IDE, click the "Upload" arrow icon (top left). This will run the program and display any program outputs to the "Serial Monitor"
+	* In the application, click the "Upload" arrow icon (top left). This will run the program and display any program outputs to the "Serial Monitor"
 magnifying glass icon (top right).
 
 ## Step 3. Upload Program Data
