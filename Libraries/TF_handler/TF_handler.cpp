@@ -3,10 +3,10 @@
 #include "TF_handler.h"
 #include "Energia.h"
 
-#define DEBUG_MODE
+//#define DEBUG_MODE
 
 #ifdef DEBUG_MODE
-#define LOG(m, f) Serial.print(m); Serial.print(": "); Serial.println(f)
+#define LOG(m, f) Serial.print(m); Serial.print(": "); Serial.println(f);delay(10)
 #else
 #define LOG(m, f) f
 #endif
@@ -36,25 +36,32 @@ TF_handler::TF_handler(int pin)
 {
   pinMode(pin, INPUT_PULLUP);
   _pin = pin; //cs pin
-  
+
 }
+
+
 int TF_handler::begin(FIL &fp)
 {
   Jaffl.begin(_pin);
-  
+
   LOG("open_code", Jaffl.open(&fp,"DATA.TXT", FA_WRITE | FA_OPEN_ALWAYS));
-  
-  delay(200);
+  if(f_size(&fp)== 0)
+  {
+    char temp [121];
+    snprintf(temp,120,"STATE\tDURATION(S)\tTIME1(mm/dd/yy)(HH:mm:ss)\tTIME2(mm/dd/yy)(HH:mm:ss)\n");
+    Jaffl.printf(&fp,temp);
+    Jaffl.sync(&fp);
+    
+  }
+
  // LOG("lseek_code", Jaffl.lseek(&fp, f_size(&fp)));
  Jaffl.lseek(&fp, f_size(&fp));
-  delay(200);
 }
 int TF_handler::store_data(FIL &fp,char* unix_time)
 {
 
   LOG("print code1", Jaffl.printf(&fp,unix_time));
-  LOG("print code2", Jaffl.printf(&fp,voltage));
-  delay(200);
+
   LOG("sync code", Jaffl.sync(&fp));
-  delay(200);
+
 }

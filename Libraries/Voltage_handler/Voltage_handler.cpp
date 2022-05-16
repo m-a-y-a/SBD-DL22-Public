@@ -12,15 +12,15 @@ int vIn = 0;
 
 Voltage_handler::Voltage_handler(int pin)
 {
-  pinMode(pin, INPUT);
+  pinMode(13, INPUT);
   _pin = pin;
 }
 
 uint32_t  Voltage_handler::get_voltage()
 {
-  volt = analogRead(_pin);                        //read the input voltage
+  volt = analogRead(13);                        //read the input voltage
   vOut = ((volt * 3.3)) / 4095.0;
   vIn = vOut / (7500.0 / (7500.0 + 30000.0));
-  delay(300);                                     //wait half a second (~2Hz)
+  uint32_t voltage = map(volt, 0, 629, 0, 4);                                     //wait half a second (~2Hz)
   return volt;
 }

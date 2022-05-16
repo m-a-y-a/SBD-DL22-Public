@@ -1,7 +1,7 @@
 /*
  * Just another FatFs Library
  * Ross Marchant, ross.marchant@my.jcu.edu.au
- * 
+ *
  * Based on:
  * Arduino Wrapper Function Library for FatFs
  * (c) 2010, David Sirkin sirkin@stanford.edu
@@ -111,7 +111,7 @@ void FFS::SPI_HIGH_SPEED(void)
 void FFS::SPI_INIT(void)
 {
     pinMode(P1_7, INPUT_PULLUP);
-    SPI.begin();    
+    SPI.begin();
     SPI.setClockDivider(128);
 }
 
@@ -146,14 +146,14 @@ FRESULT FFS::begin(
 
     CS = cs_pin;
     pinMode(CS, OUTPUT);
-    
-    
-    
+
+
+
     attach_pins(CS_LOW, CS_HIGH);
     attach_SPIdriver(SPI_RECEIVE, SPI_SEND, SPI_INIT, SPI_HIGH_SPEED);
-        
+
     disk_init();
-        
+
     res = mount(0, &fatfs_obj);
 
 #if _USE_DIR

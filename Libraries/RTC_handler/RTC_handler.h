@@ -7,13 +7,19 @@ Created by JHU SBD-DL22, 10/07/2021
 #define RTC_handler_h
 
 #include "Energia.h"
+#include <ds3231.h>
+
 
 class RTC_handler
 {
    public:
       RTC_handler();
-      uint32_t get_unix_time();
-      char* get_time_stamp();
-    
+      // original versions
+      int64_t get_unix_time();
+      unsigned int get_datetime(char* str, unsigned int str_size);
+
+      // optimized versions
+      void get_time_s(struct ts *t);
+      unsigned int get_datetime_s(char* str, unsigned int str_size, struct ts &t);
 };
 #endif

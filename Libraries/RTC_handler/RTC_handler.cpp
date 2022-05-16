@@ -8,14 +8,13 @@ Created by JHU SBD-DL22, 10/07/2021
 #include "RTC_handler.h"
 #include <Wire.h>
 #include <config.h>
-#include <ds3231.h>
+
 
 #ifndef CONFIG_UNIXTIME
   #define CONFIG_UNIXTIME
 #endif
 
 struct ts t;
-static char timevars[6];
 
 RTC_handler::RTC_handler()
 {
@@ -23,21 +22,26 @@ RTC_handler::RTC_handler()
 }
 
 // Returns unix time
-uint32_t RTC_handler::get_unix_time()
+int64_t RTC_handler::get_unix_time()
 {
   DS3231_get(&t);
-  //get_unixtime(t);
-  // return t.mday;
   return t.unixtime;
 }
-char* RTC_handler::get_time_stamp()
+
+unsigned int RTC_handler::get_datetime(char* str, unsigned int str_size)
 {
   DS3231_get(&t);
-  //get_unixtime(t);
-  // return t.mday;
-  //uint8_t TimeDate[7]= {t.mday, t.mon, t.year, t.hour, t.min, t.sec}
-  char time_stamp_temp[20] = {(char)t.mon,'/',(char)t.mday,'/',(char)t.year,' ',(char)t.hour,':',(char)t.min,':',(char)t.sec};
-  char(*time_stamp) = {"0"};
-  time_stamp= time_stamp_temp;
-  return time_stamp;
+  return snprintf(str, str_size,"%02d/%02d/%04d-%02d:%02d:%02d",t.mon, t.mday, t.year, t.hour, t.min, t.sec);
 }
+
+// Returns time
+void RTC_handler::get_time_s(struct ts *t)
+{
+  DS3231_get(t);
+}
+
+unsigned int RTC_handler::get_datetime_s(char* str, unsigned int str_size, struct ts &t)
+{
+  return snprintf(str, str_size,"%02d/%02d/%04d-%02d:%02d:%02d",t.mon, t.mday, t.year, t.hour, t.min, t.sec);
+}
+
