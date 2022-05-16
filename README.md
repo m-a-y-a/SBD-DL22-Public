@@ -38,14 +38,14 @@ Software Requirements:
 	* "t.mday" = dd (current day of the month)
 	* "t.mon" = mm (current month)
 	* "t.year" = yyyy (current year)
-2. *Run* 'set_clock.ino'
+3. *Run* 'set_clock.ino'
 	* Open Serial Monitor and verify that the current time readout is correct (Date: dd/mm/yyyy hh:mm.ss)
 
 #### Then, run a program which allows the MSP430 to begin data collection.
-3. *Open* 'MainV8.ino'
-4. *Run* 'MainV8.ino'
+4. *Open* 'MainV8.ino'
+5. *Run* 'MainV8.ino'
 
-5. Repeat Step 3, if uploading program data to multiple PCB boards.
+#### Repeat Step 3, if uploading program data to multiple PCB boards.
 
 ## Energia IDE Reference
 #### This is a general reference on how to use the Energia IDE, if any of the terminology used in the steps above is unclear:
