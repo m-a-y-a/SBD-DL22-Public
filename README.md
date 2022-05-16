@@ -20,7 +20,7 @@ Software Requirements:
 #### Now, we will connect a computer to the PCB board and set-up Energia
 1. Connect the MSP-FET debug probe from a computer, with Energia pre-installed, to the on-board JTAG header.
 2. Download the following files from our repository:
-	* 'set_clock.ino' : available at 'SBD-DL22-Public/set_clock.ino'
+	* 'clock_sync.ino' : available at 'SBD-DL22-Public/set_clock.ino'
 	* 'MainV8.ino': available at 'SBD-DL22-Public/MainV8.ino'
 3. Download the 'Libraries' file from our repository
 4. Open the folder containing Energia on the computer, and move all files in 'Libraries' to Energia's 'libraries' folder
@@ -30,15 +30,15 @@ Software Requirements:
 
 ## Step 3. Upload Program Data
 #### First, we will modify and run a program to set the RTC clock. 
-1. *Open* 'set_clock.ino'
-2. *Edit/Compile* 'set_clock.ino' with the current time (24-hr clock):
+1. *Open* 'clock_sync.ino'
+2. *Edit/Compile* 'clock_sync.ino' with the current time (24-hr clock):
 	* "t.hour" = hh (current hour)
 	* "t.min" = mm (current minute)
 	* "t.sec" = ss (current second)
 	* "t.mday" = dd (current day of the month)
 	* "t.mon" = mm (current month)
 	* "t.year" = yyyy (current year)
-3. *Run* 'set_clock.ino'
+3. *Run* 'clock_sync.ino'
 	* Open Serial Monitor and verify that the current time readout is correct (Date: dd/mm/yyyy hh:mm.ss)
 
 #### Then, run a program which allows the MSP430 to begin data collection.
