@@ -14,7 +14,7 @@ Software Requirements:
 
 ## Step 1. Install Energia
 1. Download Energia for Windows: available at https://energia.nu/download/ 
-2. Unzip/install LaunchPad drivers: available at 'SBD-DL22-Public/Energia_installation'
+2. Download LaunchPad drivers: available at 'SBD-DL22-Public/Energia_installation'
 
 ## Step 2. Prepare for Program Upload
 #### Now, we will connect a computer to the PCB board and set-up Energia
@@ -22,7 +22,9 @@ Software Requirements:
 2. Download the following files from our repository:
 	* 'set_clock.ino' : available at 'SBD-DL22-Public/set_clock.ino'
 	* 'MainV8.ino': available at 'SBD-DL22-Public/MainV8.ino'
-3. Open Energia IDE, and verify the following settings under the "Tools" menu:
+3. Download the 'Libraries' file from our repository
+4. Open the folder containing Energia on the computer, and move all files in 'Libraries' to Energia's 'libraries' folder
+5. Open Energia IDE, and verify the following settings under the "Tools" menu:
 	* in "Tools>Board", "MSP-EXP430FR5969LP" is selected
 	* in "Tools>Port", the USB port that the MSP-FET is plugged into is selected
 
@@ -42,6 +44,8 @@ Software Requirements:
 #### Then, run a program which allows the MSP430 to begin data collection.
 3. *Open* 'MainV8.ino'
 4. *Run* 'MainV8.ino'
+
+5. Repeat Step 3, if uploading program data to multiple PCB boards.
 
 ## Energia IDE Reference
 #### This is a general reference on how to use the Energia IDE, if any of the terminology used in the steps above is unclear:
